@@ -1,6 +1,7 @@
 # require_relative 'concerns/music.rb'
 
 class Artist
+  extend Concerns::Findable
 #  extend Music::ClassMethods
 #  include Music::InstanceMethods
   
