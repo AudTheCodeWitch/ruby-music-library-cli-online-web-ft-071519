@@ -11,7 +11,6 @@ module Music
   
     def self.create(name)
       self.new(name)
-      self
     end
   end
   
