@@ -13,8 +13,6 @@ class Song
     if artist != nil
       artist=(artist)
     end
-
-    save
     self
   end
   
@@ -31,7 +29,8 @@ class Song
   end
   
   def self.create(name)
-    self.new(name)
+    song = self.new(name)
+    song.save
   end
   
   def artist=(artist)
