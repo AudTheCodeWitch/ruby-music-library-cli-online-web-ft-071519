@@ -4,7 +4,7 @@ class Artist
 #  extend Music::ClassMethods
 #  include Music::InstanceMethods
   
-  attr_accessor :artist, :songs, :song
+  attr_accessor :artist, :songs
   
   @@all = []
   
@@ -35,5 +35,13 @@ class Artist
   def add_song(song)
     @songs << song unless @songs.detect {song}
     song.artist = self unless song.artist != nil
+  end
+  
+  def song_list
+    Song.all.select {|song| song.artist == self}
+  end
+  
+  def genres
+    song_list.map {|song| song.genre}.uniq
   end
 end
