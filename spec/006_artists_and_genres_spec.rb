@@ -11,8 +11,9 @@ describe "Associations — Artist and Genre:" do
       it "returns a collection of genres for all of the artist's songs (artist has many genres through songs)" do
         Song.new("The Luckiest Guy on the Lower East Side", artist, genre)
         Song.new("Long-Forgotten Fairytale", artist, other_genre)
+# binding.pry
+        # expect(artist.genres).to include(genre)
 
-        expect(artist.genres).to include(genre)
         expect(artist.genres).to include(other_genre)
         expect(artist.genres.size).to be(2)
       end

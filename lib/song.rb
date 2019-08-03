@@ -13,6 +13,7 @@ class Song
     if artist != nil
       artist=artist
     end
+    save
     self 
   end
 

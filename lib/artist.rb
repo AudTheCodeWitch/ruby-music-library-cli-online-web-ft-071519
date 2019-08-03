@@ -12,6 +12,7 @@ class Artist
   def initialize(name)
     @name = name
     @songs = []
+    save
     self
   end
 
@@ -40,5 +41,6 @@ class Artist
 
   def genres
     @songs.map { |song| song.genre }.uniq
+    binding.pry
   end
 end
