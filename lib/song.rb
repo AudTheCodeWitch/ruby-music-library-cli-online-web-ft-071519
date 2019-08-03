@@ -1,8 +1,8 @@
 class Song
   extend Concerns::Findable
   
-  attr_accessor :name 
-  attr_reader :artist, :genre
+  attr_accessor :name, :artist, :genre 
+  
   
   @@all = []
   
@@ -13,6 +13,7 @@ class Song
     if artist != nil
       artist=(artist)
     end
+    save
     self
   end
   
@@ -31,6 +32,7 @@ class Song
   def self.create(name)
     song = self.new(name)
     song.save
+    song
   end
   
   def artist=(artist)
@@ -61,6 +63,6 @@ class Song
 #  def self.find_or_create_by_name(name)
 #    self.find_by_name(name) ? self : self.create(name)
 #  end
-  
+
   
 end
