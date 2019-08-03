@@ -43,6 +43,6 @@ class Genre
   end
 
   def artists
-    song_list.map(&:artist).uniq
+
   end
 end

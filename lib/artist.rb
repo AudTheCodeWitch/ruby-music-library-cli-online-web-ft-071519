@@ -43,7 +43,6 @@ class Artist
   end
 
   def genres
-    song_list.map(&:genre).uniq
-    # binding.pry
+
   end
 end
