@@ -8,7 +8,6 @@ class Genre
   def initialize(name)
     @name = name
     @songs = []
-    self
   end
 
   def self.all
@@ -16,11 +15,11 @@ class Genre
   end
 
   def self.destroy_all
-    @@all.clear
+    all.clear
   end
 
   def save
-    @@all << self
+    self.class.all << self
   end
 
   def self.create(name)
@@ -29,20 +28,12 @@ class Genre
     genre
   end
 
-  # def songs
-   # @songs
-  # end
-
   def add_song(song)
-    @songs << song unless @songs.detect { song }
-    song.genre = self unless song.genre != nil
-  end
-
-  def song_list
-    Song.all.select { |song| song.genre == self }
+    song.genre = self unless song.genre
+    songs << song unless songs.include?(song)
   end
 
   def artists
-
+    songs.map { |song| song.artist }.uniq
   end
 end

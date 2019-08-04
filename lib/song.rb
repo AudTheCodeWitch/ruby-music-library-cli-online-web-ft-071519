@@ -6,15 +6,10 @@ class Song
 
   @@all = []
 
-  def initialize(song, artist=nil, genre=nil)
-    @name = song
+  def initialize(name, artist=nil, genre=nil)
+    @name = name
     self.artist=artist if artist
     self.genre=genre if genre
-    if artist != nil
-      artist=artist
-    end
-    save
-    self 
   end
 
   def self.all
@@ -22,11 +17,11 @@ class Song
   end
 
   def self.destroy_all
-    @@all.clear
+    all.clear
   end
 
   def save
-    @@all << self
+    self.class.all << self
   end
 
   def self.create(name)
@@ -42,7 +37,7 @@ class Song
 
   def genre=(genre)
     @genre = genre
-    genre.add_song(self)
+    genre.songs << self unless genre.songs.include?(self)
   end
 
   def self.new_from_filename(filename)

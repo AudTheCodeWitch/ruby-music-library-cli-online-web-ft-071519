@@ -5,15 +5,14 @@ class Artist
   #  extend Music::ClassMethods
   #  include Music::InstanceMethods
 
-  attr_accessor :name, :songs
+  attr_accessor :name
+  attr_reader :songs
 
   @@all = []
 
   def initialize(name)
     @name = name
     @songs = []
-    save
-    self
   end
 
   def self.all
@@ -21,11 +20,11 @@ class Artist
   end
 
   def self.destroy_all
-    @@all.clear
+    all.clear
   end
 
   def save
-    @@all << self
+    self.class.all << self
   end
 
   def self.create(name)
@@ -35,12 +34,11 @@ class Artist
   end
 
   def add_song(song)
-    @songs << song unless @songs.detect { song }
     song.artist = self unless song.artist
+    songs << song unless songs.include?(song)
   end
 
   def genres
-    @songs.map { |song| song.genre }.uniq
-    binding.pry
+    songs.map { |song| song.genre }.uniq
   end
 end
