@@ -1,0 +1,13 @@
+
+[1mFrom:[0m /mnt/c/Users/audre/dev/flatiron/labs/ruby-music-library-cli-online-web-ft-071519/lib/music_library_controller.rb @ line 44 MusicLibraryController#list_songs:
+
+    [1;34m41[0m: [32mdef[0m [1;34mlist_songs[0m
+    [1;34m42[0m:   sorted_songs = [1;34;4mSong[0m.all.map { |song_a, song_b| song_a <=> song_b }
+    [1;34m43[0m:   sorted_songs.each_with_index [32mdo[0m |song, index|
+ => [1;34m44[0m:     binding.pry
+    [1;34m45[0m:     puts [31m[1;31m"[0m[31m#{index}[0m[31m. #{song.artist}[0m[31m - #{song.name}[0m[31m - #{song.genre}[0m[31m[1;31m"[0m[31m[0m
+    [1;34m46[0m: 
+    [1;34m47[0m:   [32mend[0m
+    [1;34m48[0m: 
+    [1;34m49[0m: [32mend[0m
+

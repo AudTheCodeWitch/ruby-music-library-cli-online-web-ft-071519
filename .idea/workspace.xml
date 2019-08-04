@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2ffaef2f-5947-441b-b427-1ae9e622b54b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/artist.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/artist.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/genre.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/genre.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/song.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/song.rb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/music_library_controller.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/music_library_controller.rb" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -108,7 +106,7 @@
       <option name="presentableId" value="Default" />
       <updated>1564862224806</updated>
       <workItem from="1564862225962" duration="11269000" />
-      <workItem from="1564875062993" duration="2434000" />
+      <workItem from="1564875062993" duration="5019000" />
     </task>
     <servers />
   </component>
